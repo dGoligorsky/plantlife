@@ -31,8 +31,13 @@ slideArea.addEventListener("click", function() {
 // when I put my mouse over the slide area, put all the images in a random place
 slideArea.addEventListener("mouseover", function(){
     images.forEach(image => {
-        const x = 100 * Math.random() - 50
-        const y = 100 * Math.random() - 50
+        // random, no snapping
+        // const x = 100 * Math.random() - 50
+        // const y = 100 * Math.random() - 50
+
+        // snap to 25px grid version
+        const x = 25 * (Math.floor(Math.random() *5)) - 50
+        const y = 25 * (Math.floor(Math.random() *5)) - 50
 
         image.style.transform = `translate(${x}px, ${y}px)`
     })
