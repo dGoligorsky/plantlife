@@ -114,6 +114,7 @@ div.slides img {
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform 0.5s;
 }
 
 div.slides img:first-child {
